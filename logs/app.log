@@ -1,0 +1,108 @@
+2025-06-09 22:54:16,158 | WARNING | ecommerce_app | Signup Failed - email exists:ujjwal@example.com
+2025-06-09 22:54:42,544 | WARNING | ecommerce_app | Signup Failed - email exists:honey@example.com
+2025-06-09 22:54:52,660 | WARNING | ecommerce_app | Signup Failed - email exists:honey@example.com
+2025-06-09 23:05:31,901 | WARNING | passlib.handlers.bcrypt | (trapped) error reading bcrypt version
+Traceback (most recent call last):
+  File "C:\Users\vishn\OneDrive\Desktop\E_Commerce_App\venv\Lib\site-packages\passlib\handlers\bcrypt.py", line 620, in _load_backend_mixin
+    version = _bcrypt.__about__.__version__
+              ^^^^^^^^^^^^^^^^^
+AttributeError: module 'bcrypt' has no attribute '__about__'
+2025-06-09 23:12:50,534 | WARNING | passlib.handlers.bcrypt | (trapped) error reading bcrypt version
+Traceback (most recent call last):
+  File "C:\Users\vishn\OneDrive\Desktop\E_Commerce_App\venv\Lib\site-packages\passlib\handlers\bcrypt.py", line 620, in _load_backend_mixin
+    version = _bcrypt.__about__.__version__
+              ^^^^^^^^^^^^^^^^^
+AttributeError: module 'bcrypt' has no attribute '__about__'
+2025-06-09 23:12:50,938 | INFO | ecommerce_app | User Registerd:honey@example.com
+2025-06-09 23:13:41,623 | INFO | ecommerce_app | User logged in :honey@example.com
+2025-06-10 08:20:24,530 | INFO | ecommerce_app | Password reset email sent to: honey@example.com
+2025-06-10 08:21:49,600 | INFO | ecommerce_app | Password reset email sent to: honey@example.com
+2025-06-10 08:25:36,469 | WARNING | passlib.handlers.bcrypt | (trapped) error reading bcrypt version
+Traceback (most recent call last):
+  File "C:\Users\vishn\OneDrive\Desktop\E_Commerce_App\venv\Lib\site-packages\passlib\handlers\bcrypt.py", line 620, in _load_backend_mixin
+    version = _bcrypt.__about__.__version__
+              ^^^^^^^^^^^^^^^^^
+AttributeError: module 'bcrypt' has no attribute '__about__'
+2025-06-10 08:25:37,336 | INFO | ecommerce_app | Password successfully reset for : honey@example.com
+2025-06-10 08:26:30,672 | INFO | ecommerce_app | User logged in :honey@example.com
+2025-06-10 09:49:51,707 | WARNING | ecommerce_app | Login Failed:ujjwal@test.com
+2025-06-10 09:50:03,560 | WARNING | passlib.handlers.bcrypt | (trapped) error reading bcrypt version
+Traceback (most recent call last):
+  File "C:\Users\vishn\OneDrive\Desktop\E_Commerce_App\venv\Lib\site-packages\passlib\handlers\bcrypt.py", line 620, in _load_backend_mixin
+    version = _bcrypt.__about__.__version__
+              ^^^^^^^^^^^^^^^^^
+AttributeError: module 'bcrypt' has no attribute '__about__'
+2025-06-10 09:50:04,042 | INFO | ecommerce_app | User Registerd:ujjwal@test.com
+2025-06-10 09:50:28,282 | INFO | ecommerce_app | User logged in :ujjwal@test.com
+2025-06-11 08:57:51,280 | WARNING | passlib.handlers.bcrypt | (trapped) error reading bcrypt version
+Traceback (most recent call last):
+  File "C:\Users\vishn\OneDrive\Desktop\E_Commerce_App\venv\Lib\site-packages\passlib\handlers\bcrypt.py", line 620, in _load_backend_mixin
+    version = _bcrypt.__about__.__version__
+              ^^^^^^^^^^^^^^^^^
+AttributeError: module 'bcrypt' has no attribute '__about__'
+2025-06-11 08:57:51,702 | INFO | ecommerce_app | User Registerd:ujjwal@test.com
+2025-06-11 08:59:51,487 | WARNING | passlib.handlers.bcrypt | (trapped) error reading bcrypt version
+Traceback (most recent call last):
+  File "C:\Users\vishn\OneDrive\Desktop\E_Commerce_App\venv\Lib\site-packages\passlib\handlers\bcrypt.py", line 620, in _load_backend_mixin
+    version = _bcrypt.__about__.__version__
+              ^^^^^^^^^^^^^^^^^
+AttributeError: module 'bcrypt' has no attribute '__about__'
+2025-06-11 08:59:52,346 | INFO | ecommerce_app | User Registerd:honey@admin.com
+2025-06-11 09:00:25,145 | INFO | ecommerce_app | User logged in :ujjwal@test.com
+2025-06-11 09:01:00,929 | INFO | ecommerce_app | User logged in :ujjwal@test.com
+2025-06-11 09:02:09,340 | INFO | ecommerce_app | Password reset email sent to: ujjwal@test.com
+2025-06-11 09:03:14,127 | ERROR | ecommerce_app | Invalid or expired reset token
+2025-06-11 09:04:23,729 | ERROR | ecommerce_app | Invalid or expired reset token
+2025-06-11 09:05:25,663 | ERROR | ecommerce_app | Invalid or expired reset token
+2025-06-11 09:14:55,445 | WARNING | ecommerce_app | Forgot Password for non-existent email:honey@example.com
+2025-06-11 09:15:08,354 | INFO | ecommerce_app | Password reset email sent to: honey@admin.com
+2025-06-11 09:16:09,751 | ERROR | ecommerce_app | Invalid or expired reset token
+2025-06-11 09:21:55,252 | WARNING | passlib.handlers.bcrypt | (trapped) error reading bcrypt version
+Traceback (most recent call last):
+  File "C:\Users\vishn\OneDrive\Desktop\E_Commerce_App\venv\Lib\site-packages\passlib\handlers\bcrypt.py", line 620, in _load_backend_mixin
+    version = _bcrypt.__about__.__version__
+              ^^^^^^^^^^^^^^^^^
+AttributeError: module 'bcrypt' has no attribute '__about__'
+2025-06-11 09:21:55,560 | INFO | ecommerce_app | Password successfully reset for : 2
+2025-06-11 09:28:25,940 | INFO | ecommerce_app | User logged in :honey@admin.com
+2025-06-11 09:28:52,235 | INFO | ecommerce_app | User logged in :honey@admin.com
+2025-06-11 11:50:45,130 | WARNING | ecommerce_app | Login Failed:ujjwal@test.com
+2025-06-11 11:50:51,490 | INFO | ecommerce_app | User logged in :ujjwal@test.com
+2025-06-11 12:27:09,079 | WARNING | passlib.handlers.bcrypt | (trapped) error reading bcrypt version
+Traceback (most recent call last):
+  File "C:\Users\vishn\OneDrive\Desktop\E_Commerce_App\venv\Lib\site-packages\passlib\handlers\bcrypt.py", line 620, in _load_backend_mixin
+    version = _bcrypt.__about__.__version__
+              ^^^^^^^^^^^^^^^^^
+AttributeError: module 'bcrypt' has no attribute '__about__'
+2025-06-11 12:27:09,909 | INFO | ecommerce_app | User logged in :ujjwal@test.com
+2025-06-11 16:19:10,389 | WARNING | ecommerce_app | Login Failed:ujjwal@test.com
+2025-06-11 16:19:16,288 | WARNING | ecommerce_app | Login Failed:ujjwal@test.com
+2025-06-11 16:19:27,652 | WARNING | ecommerce_app | Login Failed:ujjwal@test.com
+2025-06-11 16:19:54,131 | WARNING | ecommerce_app | Login Failed:honey@admin.com
+2025-06-11 16:20:25,300 | WARNING | ecommerce_app | Login Failed:honey@admin.com
+2025-06-11 16:21:16,246 | WARNING | passlib.handlers.bcrypt | (trapped) error reading bcrypt version
+Traceback (most recent call last):
+  File "C:\Users\vishn\OneDrive\Desktop\E_Commerce_App\venv\Lib\site-packages\passlib\handlers\bcrypt.py", line 620, in _load_backend_mixin
+    version = _bcrypt.__about__.__version__
+              ^^^^^^^^^^^^^^^^^
+AttributeError: module 'bcrypt' has no attribute '__about__'
+2025-06-11 16:21:17,196 | INFO | ecommerce_app | User Registerd:honey@admin.com
+2025-06-11 16:21:46,764 | INFO | ecommerce_app | User Registerd:ujjwal@user.com
+2025-06-11 16:22:12,710 | INFO | ecommerce_app | User logged in :honey@admin.com
+2025-06-11 16:26:34,765 | WARNING | passlib.handlers.bcrypt | (trapped) error reading bcrypt version
+Traceback (most recent call last):
+  File "C:\Users\vishn\OneDrive\Desktop\E_Commerce_App\venv\Lib\site-packages\passlib\handlers\bcrypt.py", line 620, in _load_backend_mixin
+    version = _bcrypt.__about__.__version__
+              ^^^^^^^^^^^^^^^^^
+AttributeError: module 'bcrypt' has no attribute '__about__'
+2025-06-11 16:26:35,624 | INFO | ecommerce_app | User Registerd:ujjwal@admin.com
+2025-06-11 16:27:00,897 | INFO | ecommerce_app | User Registerd:honey@user.com
+2025-06-11 16:27:36,265 | INFO | ecommerce_app | User logged in :ujjwal@admin.com
+2025-06-11 16:29:54,904 | INFO | ecommerce_app | User logged in :honey@user.com
+2025-06-11 17:48:07,261 | WARNING | passlib.handlers.bcrypt | (trapped) error reading bcrypt version
+Traceback (most recent call last):
+  File "C:\Users\vishn\OneDrive\Desktop\E_Commerce_App\venv\Lib\site-packages\passlib\handlers\bcrypt.py", line 620, in _load_backend_mixin
+    version = _bcrypt.__about__.__version__
+              ^^^^^^^^^^^^^^^^^
+AttributeError: module 'bcrypt' has no attribute '__about__'
+2025-06-11 17:48:07,591 | INFO | ecommerce_app | User logged in :honey@user.com
