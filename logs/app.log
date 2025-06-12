@@ -106,3 +106,15 @@ Traceback (most recent call last):
               ^^^^^^^^^^^^^^^^^
 AttributeError: module 'bcrypt' has no attribute '__about__'
 2025-06-11 17:48:07,591 | INFO | ecommerce_app | User logged in :honey@user.com
+2025-06-12 16:35:12,905 | WARNING | passlib.handlers.bcrypt | (trapped) error reading bcrypt version
+Traceback (most recent call last):
+  File "C:\Users\vishn\OneDrive\Desktop\E_Commerce_App\venv\Lib\site-packages\passlib\handlers\bcrypt.py", line 620, in _load_backend_mixin
+    version = _bcrypt.__about__.__version__
+              ^^^^^^^^^^^^^^^^^
+AttributeError: module 'bcrypt' has no attribute '__about__'
+2025-06-12 16:35:13,314 | INFO | ecommerce_app | User Registerd:vaibhav@admin.com
+2025-06-12 16:35:50,999 | INFO | ecommerce_app | User Registerd:tushar@user.com
+2025-06-12 16:37:21,213 | INFO | ecommerce_app | Password reset email sent to: tushar@user.com
+2025-06-12 16:38:31,301 | INFO | ecommerce_app | Password successfully reset for : 4
+2025-06-12 16:39:22,927 | INFO | ecommerce_app | User logged in :vaibhav@admin.com
+2025-06-12 16:44:35,218 | INFO | ecommerce_app | User logged in :honey@user.com

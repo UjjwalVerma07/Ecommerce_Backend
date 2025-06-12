@@ -15,7 +15,6 @@ class CartItemUpdate(BaseModel):
 class CartItemResponse(CartItemBase):
     product:ProductResponse
     quantity:int
-    # id:int
     
     class Config:
         form_attributes=True

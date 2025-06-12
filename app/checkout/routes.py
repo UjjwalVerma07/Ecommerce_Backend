@@ -35,18 +35,14 @@ def checkout(
         status=OrderStatus.paid
     )
     
-    #The moment order gets placed than you should update the product quanity in products;
-    #This will be implemented later
     db.add(order)
     db.flush()
     
-    #########################################
     for item in cart_items:
         product=db.query(Product).filter(Product.id==item.product_id).first()
         if not product or product.stock<item.quantity:
             raise HTTPException(status_code=400,detail=f"Insufficient stock for product Id {item.product_id}")
         product.stock=product.stock-item.quantity
-    ########################################
     
     for item in cart_items:
         db_item = models.OrderItem(

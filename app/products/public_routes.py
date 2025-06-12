@@ -10,9 +10,8 @@ public_router=APIRouter(
     prefix="/products",
     tags=["Public Products"]
 )
-  
-#Working
-@public_router.get("/",response_model=List[schemas.ProductResponse])
+
+@public_router.get("",response_model=List[schemas.ProductResponse])
 def list_products(
     db:Session=Depends(get_db),
     category:str=Query(None),
@@ -30,19 +29,16 @@ def list_products(
         query=query.filter(models.Product.price>=min_price)
     if max_price is not None:
         query=query.filter(models.Product.price<=max_price)
-    
-    #Sorting
+
     if sort_by=="price":
         query=query.order_by(models.Product.price.asc())
     elif sort_by=="name":
         query=query.order_by(models.Product.name.asc())
-        
-    #Pagination
+
     
     products=query.offset((page-1)*page_size).limit(page_size).all()
     return products
 
-#Working
 @public_router.get("/search",response_model=List[schemas.ProductResponse])
 def search_products(db:Session=Depends(get_db),keyword:str=Query(...,min_length=1)):
     results=db.query(models.Product).filter(
@@ -54,7 +50,6 @@ def search_products(db:Session=Depends(get_db),keyword:str=Query(...,min_length=
     ).all()
     return results
 
-#Working
 @public_router.get("/{id}",response_model=schemas.ProductResponse)
 def get_product_detail(id:int,db:Session=Depends(get_db)):
     product=db.query(models.Product).filter(models.Product.id==id).first()

@@ -3,6 +3,8 @@ from typing import List
 from datetime import datetime
 from enum import Enum
 
+from app.products.schemas import ProductResponse
+
 class OrderItemBase(BaseModel):
     product_id:int
     quantity:int
@@ -10,6 +12,7 @@ class OrderItemBase(BaseModel):
 
 class OrderItemResponse(OrderItemBase):
     id:int
+    product:ProductResponse
     class Config:
         from_attributes=True
 

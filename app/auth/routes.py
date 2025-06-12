@@ -48,11 +48,7 @@ async def forgot_password(payload:schemas.ForgotPasswordRequest,db:Session=Depen
     if not user:
         logger.warning(f"Forgot Password for non-existent email:{payload.email}")
         raise HTTPException(status_code=404,detail="User not Found")
-    
-    #Have to the changes here
-    # token=utils.create_reset_token()
-    # reset_tokens[user.email]=token
-    
+
     db.query(models.PasswordResetToken).filter(models.PasswordResetToken.user_id==user.id,
             models.PasswordResetToken.is_used==False).update({models.PasswordResetToken.is_used:True})
     
@@ -73,17 +69,10 @@ async def forgot_password(payload:schemas.ForgotPasswordRequest,db:Session=Depen
     )
     logger.info(f"Password reset email sent to: {user.email}")
     return {"message": "Password reset email sent"}
-    # logger.info(f"Password reset token created for :{user.email}-Token:{token}")
-    # return {"message": "Password reset link sent (mocked)", "reset_token": token}
     
     
 @router.post("/reset-password")
 def reset_password(payload:schemas.ResetPasswordRequest,db:Session=Depends(get_db)):
-    # email=None
-    # for emaill,token in reset_tokens.items():
-    #     if token==payload.token:
-    #         email=emaill
-    #         break
     db_token=db.query(models.PasswordResetToken).filter(
         models.PasswordResetToken.token==payload.token,
         models.PasswordResetToken.is_used==False
@@ -98,7 +87,6 @@ def reset_password(payload:schemas.ResetPasswordRequest,db:Session=Depends(get_d
     user.hashed_password=utils.hash_password(payload.new_password)
     db_token.is_used=True
     db.commit()
-    #reset_tokens.pop(email)
     logger.info(f"Password successfully reset for : {user.id}")
     return {"message":"Password has been sent successfully!!"}
     

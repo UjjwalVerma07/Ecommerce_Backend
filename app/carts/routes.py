@@ -12,8 +12,7 @@ router=APIRouter(prefix="/cart",tags=["Cart"])
 def check_user(user:User):
     if(user.role!="user"):
         raise HTTPException(status_code=403,detail=f"User Only")
-    
-#For Posting in Cart
+
 @router.post("",response_model=schemas.CartItemResponse)
 def add_to_cart(item:schemas.CartItemCreate,db:Session=Depends(get_db),current_user:User=Depends(get_current_user)):
     check_user(current_user)
@@ -39,15 +38,12 @@ def add_to_cart(item:schemas.CartItemCreate,db:Session=Depends(get_db),current_u
     db.refresh(cart_item)
     return cart_item
     
-
-#For Getting in Cart
-@router.get("/",response_model=schemas.CartResponse)
+@router.get("",response_model=schemas.CartResponse)
 def view_cart(db:Session=Depends(get_db),current_user:User=Depends(get_current_user)):
     check_user(current_user)
     items=db.query(models.CartItem).filter(models.CartItem.user_id==current_user.id).all()
     return {"items": items}
 
-#For Deleting in Cart
 @router.delete("/{product_id}",status_code=204)
 def remove_from_cart(product_id:int,db:Session=Depends(get_db),current_user:User=Depends(get_current_user)):
     check_user(current_user)
@@ -59,8 +55,7 @@ def remove_from_cart(product_id:int,db:Session=Depends(get_db),current_user:User
     db.commit()
     return {"message":"Item From Cart Deleted Successfully!!"}
  
-#For Updating in Cart
-#Need To check Tommorrow   
+
 @router.put("/{product_id}",response_model=schemas.CartResponse)
 def update_quantity(product_id:int,data:schemas.CartItemUpdate,db:Session=Depends(get_db),current_user:User=Depends(get_current_user)):
     check_user(current_user)

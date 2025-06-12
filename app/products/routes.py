@@ -72,5 +72,4 @@ def delete_product(id:int,db:Session=Depends(get_db),current_user:User=Depends(g
     return {"Message":"Product Deleted Successfullyy"}
 
 
-#############################-----Here We Will Add The Public Routes--------############################
 

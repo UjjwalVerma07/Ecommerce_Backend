@@ -14,9 +14,7 @@ class User(Base):
     email=Column(String,nullable=False,unique=True)
     hashed_password=Column(String,nullable=False)
     role=Column(Enum(UserRole),default=UserRole.user)
-    #cart_items = relationship("CartItem", back_populates="user")
     cart_items = relationship("CartItem", back_populates="user")
-    # orders=relationship("Order",back_populates="user")
 
     
 class PasswordResetToken(Base):
@@ -31,6 +29,6 @@ class PasswordResetToken(Base):
     user=relationship("User")
     
     
-from app.orders.models import Order  # import last
+from app.orders.models import Order  
 
 User.orders = relationship("Order", back_populates="user")
